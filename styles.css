@@ -10,7 +10,7 @@ body {
 }
 
 #score {
-    font-size: 1.5em;
+    font-size: 16pt;
     margin-bottom: 20px;
 }
 
@@ -27,12 +27,19 @@ body {
 
 button {
     padding: 5px 40px;
-    margin: 5px;
     font-size: 28pt;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    button {
+        padding: 5px 15px;
+        font-size: 18pt;
+    }
 }
 
 button:hover {
@@ -45,6 +52,7 @@ button:active {
 
 #startQuiz, #replaySound {
     background-color: #BB86FC;
+    margin: 2px;
     color: black;
 }
 
