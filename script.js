@@ -4,34 +4,34 @@ let correctCount = 0;
 let wrongCount = 0;
 
 const sounds = [
-    { letter: 'ㄱ', sound: 'audio/consonants_with_a/g.mp3' },
-    { letter: 'ㄴ', sound: 'audio/consonants_with_a/n.mp3' },
-    { letter: 'ㄷ', sound: 'audio/consonants_with_a/d.mp3' },
-    { letter: 'ㄹ', sound: 'audio/consonants_with_a/r.mp3' },
-    { letter: 'ㅁ', sound: 'audio/consonants_with_a/m.mp3' },
-    { letter: 'ㅂ', sound: 'audio/consonants_with_a/b.mp3' },
-    { letter: 'ㅅ', sound: 'audio/consonants_with_a/s.mp3' },
-    { letter: 'ㅇ', sound: 'audio/consonants_with_a/ng.mp3' },
-    { letter: 'ㅈ', sound: 'audio/consonants_with_a/j.mp3' },
-    { letter: 'ㅊ', sound: 'audio/consonants_with_a/ch.mp3' },
-    { letter: 'ㅋ', sound: 'audio/consonants_with_a/k.mp3' },
-    { letter: 'ㅌ', sound: 'audio/consonants_with_a/t.mp3' },
-    { letter: 'ㅍ', sound: 'audio/consonants_with_a/p.mp3' },
-    { letter: 'ㅎ', sound: 'audio/consonants_with_a/h.mp3' },
-    { letter: 'ㅏ', sound: 'audio/simple_vowels/a.mp3' },
-    { letter: 'ㅑ', sound: 'audio/simple_vowels/ya.mp3' },
-    { letter: 'ㅓ', sound: 'audio/simple_vowels/eo.mp3' },
-    { letter: 'ㅕ', sound: 'audio/simple_vowels/yeo.mp3' },
-    { letter: 'ㅗ', sound: 'audio/simple_vowels/o.mp3' },
-    { letter: 'ㅛ', sound: 'audio/simple_vowels/yo.mp3' },
-    { letter: 'ㅜ', sound: 'audio/simple_vowels/u.mp3' },
-    { letter: 'ㅠ', sound: 'audio/simple_vowels/yu.mp3' },
-    { letter: 'ㅡ', sound: 'audio/simple_vowels/eu.mp3' },
-    { letter: 'ㅣ', sound: 'audio/simple_vowels/i.mp3' },
-    { letter: 'ㅔ', sound: 'audio/complex_vowels/e.mp3' },
-    { letter: 'ㅐ', sound: 'audio/complex_vowels/ae.mp3' },
-    { letter: 'ㅖ', sound: 'audio/complex_vowels/ye.mp3' },
-    { letter: 'ㅒ', sound: 'audio/complex_vowels/yae.mp3' }
+    { letter: 'ㄱ', sound: 'audio/consonants_with_a/g.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㄴ', sound: 'audio/consonants_with_a/n.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㄷ', sound: 'audio/consonants_with_a/d.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㄹ', sound: 'audio/consonants_with_a/r.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅁ', sound: 'audio/consonants_with_a/m.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅂ', sound: 'audio/consonants_with_a/b.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅅ', sound: 'audio/consonants_with_a/s.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅇ', sound: 'audio/consonants_with_a/ng.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅈ', sound: 'audio/consonants_with_a/j.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅊ', sound: 'audio/consonants_with_a/ch.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅋ', sound: 'audio/consonants_with_a/k.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅌ', sound: 'audio/consonants_with_a/t.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅍ', sound: 'audio/consonants_with_a/p.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅎ', sound: 'audio/consonants_with_a/h.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅏ', sound: 'audio/simple_vowels/a.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅑ', sound: 'audio/simple_vowels/ya.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅓ', sound: 'audio/simple_vowels/eo.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅕ', sound: 'audio/simple_vowels/yeo.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅗ', sound: 'audio/simple_vowels/o.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅛ', sound: 'audio/simple_vowels/yo.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅜ', sound: 'audio/simple_vowels/u.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅠ', sound: 'audio/simple_vowels/yu.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅡ', sound: 'audio/simple_vowels/eu.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅣ', sound: 'audio/simple_vowels/i.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅔ', sound: 'audio/complex_vowels/e.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅐ', sound: 'audio/complex_vowels/ae.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅖ', sound: 'audio/complex_vowels/ye.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅒ', sound: 'audio/complex_vowels/yae.mp3', correct: 0, incorrect: 0 }
 ];
 
 window.onload = () => {
@@ -63,16 +63,42 @@ function replaySound() {
     }
 }
 
+function updateScores() {
+    const scoresTbody = document.getElementById('individualScores').getElementsByTagName('tbody')[0];
+    scoresTbody.innerHTML = ''; // Clear previous scores
+
+    sounds.forEach(sound => {
+        const totalAttempts = sound.correct + sound.incorrect;
+        const percentageCorrect = totalAttempts > 0 ? (sound.correct / totalAttempts * 100).toFixed(2) : 0;
+
+        const row = scoresTbody.insertRow();
+        row.insertCell().innerText = sound.letter;
+        row.insertCell().innerText = sound.correct;
+        row.insertCell().innerText = sound.incorrect;
+        row.insertCell().innerText = `${percentageCorrect}%`;
+    });
+}
+
 function checkAnswer(letter, button) {
+    const feedbackDiv = document.getElementById('feedback');
+    const soundObj = sounds.find(sound => sound.letter === letter);
+
     if (letter === currentLetter) {
         button.classList.add('correct');
         correctCount++;
         document.getElementById('correct').innerText = correctCount;
+        soundObj.correct++;
+        feedbackDiv.innerText = '';
     } else {
         button.classList.add('incorrect');
         wrongCount++;
         document.getElementById('wrong').innerText = wrongCount;
+        soundObj.incorrect++;
+        feedbackDiv.innerText = `Incorrect! The correct answer was: ${currentLetter}, you clicked ${letter}`;
     }
+
+    updateScores();
+
     setTimeout(() => {
         button.classList.remove('correct', 'incorrect');
         startQuiz(); // Start the next question
