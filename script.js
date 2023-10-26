@@ -71,8 +71,7 @@ function updateScores() {
 
         const row = scoresTbody.insertRow();
         row.insertCell().innerText = sound.letter;
-        row.insertCell().innerText = sound.correct;
-        row.insertCell().innerText = sound.incorrect;
+        row.insertCell().innerText = `${sound.correct} / ${totalAttempts}`;
         row.insertCell().innerText = `${percentageCorrect}%`;
     });
 }
