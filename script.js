@@ -11,7 +11,7 @@ const sounds = [
     { letter: 'ㅁ', sound: 'audio/consonants_with_a/m.mp3', correct: 0, incorrect: 0 },
     { letter: 'ㅂ', sound: 'audio/consonants_with_a/b.mp3', correct: 0, incorrect: 0 },
     { letter: 'ㅅ', sound: 'audio/consonants_with_a/s.mp3', correct: 0, incorrect: 0 },
-    { letter: 'ㅇ', sound: 'audio/consonants_with_a/ng.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅇ', sound: 'audio/no_sound.mp3', correct: 0, incorrect: 0 }, // TODO: Better solution?
     { letter: 'ㅈ', sound: 'audio/consonants_with_a/j.mp3', correct: 0, incorrect: 0 },
     { letter: 'ㅊ', sound: 'audio/consonants_with_a/ch.mp3', correct: 0, incorrect: 0 },
     { letter: 'ㅋ', sound: 'audio/consonants_with_a/k.mp3', correct: 0, incorrect: 0 },
