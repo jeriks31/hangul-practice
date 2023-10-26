@@ -39,7 +39,7 @@ window.onload = () => {
     sounds.forEach(sound => {
         const button = document.createElement('button');
         button.innerText = sound.letter;
-        button.onclick = () => checkAnswer(sound.letter);
+        button.onclick = () => checkAnswer(sound.letter, button);
         buttonsDiv.appendChild(button);
     });
 
@@ -63,13 +63,18 @@ function replaySound() {
     }
 }
 
-function checkAnswer(letter) {
+function checkAnswer(letter, button) {
     if (letter === currentLetter) {
+        button.classList.add('correct');
         correctCount++;
         document.getElementById('correct').innerText = correctCount;
     } else {
+        button.classList.add('incorrect');
         wrongCount++;
         document.getElementById('wrong').innerText = wrongCount;
     }
-    startQuiz(); // Start the next question
+    setTimeout(() => {
+        button.classList.remove('correct', 'incorrect');
+        startQuiz(); // Start the next question
+    }, 500); // Wait 1 second before starting the next question
 }

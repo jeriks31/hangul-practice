@@ -60,6 +60,10 @@ button:active {
     background-color: #a371e5;
 }
 
-#startQuiz:active, #replaySound:active {
-    background-color: #8e58c8;
+button.correct {
+    background-color: #00C853; /* Green */
+}
+
+button.incorrect {
+    background-color: #D50000; /* Red */
 }
