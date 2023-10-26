@@ -53,6 +53,7 @@ function startQuiz() {
     currentLetter = chosenSound.letter;
 
     const audio = new Audio(chosenSound.sound);
+    currentAudio = audio;
     audio.play();
 }
 
