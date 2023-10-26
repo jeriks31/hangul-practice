@@ -80,7 +80,7 @@ function updateScores() {
 }
 
 function checkAnswer(letter, button) {
-    const feedbackDiv = document.getElementById('feedback');
+    let correctButton = null;
     const soundObj = sounds.find(sound => sound.letter === letter);
 
     if (letter === currentLetter) {
@@ -88,19 +88,22 @@ function checkAnswer(letter, button) {
         correctCount++;
         document.getElementById('correct').innerText = correctCount;
         soundObj.correct++;
-        feedbackDiv.innerText = '';
     } else {
         button.classList.add('incorrect');
         wrongCount++;
         document.getElementById('wrong').innerText = wrongCount;
         soundObj.incorrect++;
-        feedbackDiv.innerText = `Incorrect! The correct answer was: ${currentLetter}, you clicked ${letter}`;
+
+        // Highlight correct button
+        correctButton = Array.from(document.getElementById('buttons').children).find(btn => btn.innerText === currentLetter);
+        correctButton.classList.add('correct');
     }
 
     updateScores();
 
     setTimeout(() => {
         button.classList.remove('correct', 'incorrect');
+        correctButton?.classList.remove('correct');
         startQuiz(); // Start the next question
-    }, 500); // Wait 1 second before starting the next question
+    }, 1000); // Wait 1 second before starting the next question
 }
