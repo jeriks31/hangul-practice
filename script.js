@@ -28,10 +28,8 @@ const sounds = [
     { letter: 'ㅠ', sound: 'audio/simple_vowels/yu.mp3', correct: 0, incorrect: 0 },
     { letter: 'ㅡ', sound: 'audio/simple_vowels/eu.mp3', correct: 0, incorrect: 0 },
     { letter: 'ㅣ', sound: 'audio/simple_vowels/i.mp3', correct: 0, incorrect: 0 },
-    { letter: 'ㅔ', sound: 'audio/complex_vowels/e.mp3', correct: 0, incorrect: 0 },
-    { letter: 'ㅐ', sound: 'audio/complex_vowels/ae.mp3', correct: 0, incorrect: 0 },
-    { letter: 'ㅖ', sound: 'audio/complex_vowels/ye.mp3', correct: 0, incorrect: 0 },
-    { letter: 'ㅒ', sound: 'audio/complex_vowels/yae.mp3', correct: 0, incorrect: 0 }
+    { letter: 'ㅔ/ㅐ', sound: 'audio/complex_vowels/ae_or_e.mp3', correct: 0, incorrect: 0 },
+    { letter: 'ㅖ/ㅒ', sound: 'audio/complex_vowels/yae_or_ye.mp3', correct: 0, incorrect: 0 }
 ];
 
 window.onload = () => {
