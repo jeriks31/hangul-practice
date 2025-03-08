@@ -33,6 +33,11 @@ body {
     font-size: 1.2em;
 }
 
+#letter {
+    font-size: 48pt;
+    margin: 20px;
+    min-height: 80px;
+}
 
 #buttons {
     display: grid;
@@ -85,6 +90,16 @@ button:active {
 
 #startQuiz:hover, #replaySound:hover {
     background-color: #a371e5;
+}
+
+#switchMode {
+    background-color: #03DAC6;
+    margin: 2px;
+    color: black;
+}
+
+#switchMode:hover {
+    background-color: #02c7b2;
 }
 
 button.correct {
